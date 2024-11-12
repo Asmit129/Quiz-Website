@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="dashboard.css" />
+		<title>Quizzey</title>
+	</head>
+	<body>
+		<div class="nav_bar">
+			<h2>QUIZZEY</h2>
+			<div class="user_name" onclick="toggle_dropdown()">
+				<h2 id="name">FIRST_NAME</h2>
+				<img
+					src="https://icon-library.com/images/default-user-icon/default-user-icon-4.jpg"
+					alt="Profile Picture"
+				/>
+			</div>
+			<div class="dd_wrapper" id="dropdown">
+				<button>Dashboard</button>
+				<button>Profile</button>
+				<hr />
+				<button onclick="signOut()">Sign Out</button>
+			</div>
+		</div>
+		<div class="root">
+			<div class="class_btns">
+				<button onclick="toggle_modal_1()">
+					<span class="material-icons"> add_circle_outline </span>
+					CREATE CLASS
+				</button>
+				<button onclick="toggle_modal_2()">
+					<span class="material-icons"> school </span>
+					JOIN CLASS
+				</button>
+			</div>
+			<div class="class_card_wrapper"></div>
+		</div>
+		<div class="modal-bg">
+			<div class="modal_1">
+				<h3>CREATE CLASS</h3>
+				<h3 onclick="toggle_modal_1()">
+					<span class="material-icons">close</span>
+				</h3>
+				<hr />
+				<form id="createClassForm">
+					<label>Classroom Name</label>
+					<input
+						name="class_title"
+						type="text"
+						maxlength="20"
+						required
+					/>
+					<label>Classroom Description</label>
+					<input
+						name="class_desc"
+						type="text"
+						maxlength="125"
+						required
+					/>
+					<button type="submit">ADD CLASS</button>
+				</form>
+			</div>
+			<div class="modal_2">
+				<h3>JOIN CLASS</h3>
+				<h3 onclick="toggle_modal_2()">
+					<span class="material-icons">close</span>
+				</h3>
+				<hr />
+				<form id="joinClassForm">
+					<label>Classroom Code</label>
+					<input
+						name="classCode"
+						type="text"
+						minlength="7"
+						maxlength="7"
+						required
+					/>
+					<button type="submit">JOIN CLASS</button>
+				</form>
+			</div>
+		</div>
+		<script src="./dashboard.js"></script>
+	</body>
+</html>

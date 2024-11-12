@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="signUp.css" />
+		<title>Quizzey</title>
+	</head>
+	<body>
+		<div class="signUpCard">
+			<h1>Sign Up</h1>
+			<form id="signUpForm">
+				<input
+					class="name"
+					type="text"
+					style="margin-right: 15px"
+					placeholder="First Name"
+					name="first_name"
+					required
+				/>
+				<input
+					class="name"
+					type="text"
+					placeholder="Last Name"
+					name="last_name"
+					required
+				/>
+				<input
+					class="rem_textbox"
+					type="email"
+					placeholder="Email"
+					name="email"
+					required
+				/>
+				<input
+					class="rem_textbox"
+					type="password"
+					placeholder="Create Password"
+					name="password"
+					required
+				/>
+				<input
+					class="rem_textbox"
+					type="password"
+					placeholder="Confirm Password"
+					name="confirm_password"
+					required
+				/>
+				<button type="submit">SIGN UP</button>
+			</form>
+			<span>Already have an account ?</span>
+			<a class="h-center" href="./signIn.html">Log In</a>
+		</div>
+		<script src="./signUp.js"></script>
+	</body>
+</html>

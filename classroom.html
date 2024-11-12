@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="classroom.css" />
+		<title>Quizzey</title>
+	</head>
+	<body>
+		<div class="nav_bar">
+			<h2>QUIZZEY</h2>
+			<div class="user_name" onclick="toggle_dropdown()">
+				<h2 id="name">FIRST_NAME</h2>
+				<img
+					src="https://icon-library.com/images/default-user-icon/default-user-icon-4.jpg"
+					alt="Profile Picture"
+				/>
+			</div>
+			<div class="dd_wrapper" id="dropdown">
+				<button onclick="toDashboard()">Dashboard</button>
+				<button>Profile</button>
+				<hr />
+				<button onclick="signOut()">Sign Out</button>
+			</div>
+		</div>
+		<div class="root">
+			<div class="class_card"><h1>Loading...</h1></div>
+			<div class="options_card">
+				<div class="class_code">
+					<h1>Class Code:</h1>
+					<span id="classCode"></span>
+				</div>
+				<div class="opt_btns">
+					<button onclick="toggle_modal_1()">
+						<span class="material-icons"> remove_circle </span>
+						Delete Class
+					</button>
+					<button onclick="toggle_contents()" id="page_toggle_btn">
+						<span class="material-icons">people</span>
+						Students
+					</button>
+					<button onclick="toAddQuiz()">
+						<span class="material-icons"> add_circle_outline </span>
+						Add Quiz
+					</button>
+				</div>
+			</div>
+			<div class="quiz_card_wrapper"></div>
+		</div>
+		<div class="modal-bg">
+			<div class="modal_1">
+				<h3>DELETE CLASS</h3>
+				<h3 onclick="toggle_modal_1()">
+					<span class="material-icons">close</span>
+				</h3>
+				<hr />
+				<form id="deleteClassForm">
+					<p>
+						Please enter the class name to confirm the deletion of
+						class
+					</p>
+					<input
+						id="class_title"
+						type="text"
+						maxlength="20"
+						required
+					/>
+					<p id="err_info">
+						<span class="material-icons"> error </span>
+						Incorrect Classname
+					</p>
+					<button type="submit">DELETE CLASS</button>
+				</form>
+			</div>
+			<div class="modal_2">
+				<h3>REMOVE STUDENT</h3>
+				<h3 onclick="toggle_modal_2()">
+					<span class="material-icons">close</span>
+				</h3>
+				<hr />
+				<p id="remove_stu_para"></p>
+				<button id="remove_btn" onclick="deleteStudent()">
+					REMOVE
+				</button>
+				<button onclick="toggle_modal_2()">CANCEL</button>
+			</div>
+			<div class="modal_3">
+				<h3>REMOVE QUIZ</h3>
+				<h3 onclick="toggle_modal_3()">
+					<span class="material-icons">close</span>
+				</h3>
+				<hr />
+				<p id="remove_quiz_para"></p>
+				<button id="remove_quiz_btn" onclick="deleteQuiz()">
+					REMOVE
+				</button>
+				<button onclick="toggle_modal_3()">CANCEL</button>
+			</div>
+		</div>
+		<script src="classroom.js"></script>
+	</body>
+</html>

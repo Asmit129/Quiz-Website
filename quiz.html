@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="quiz.css" />
+		<title>Quizzey</title>
+	</head>
+	<body>
+		<div class="nav_bar">
+			<h2>QUIZZEY</h2>
+			<div class="user_name">
+				<h2 id="name">FIRST_NAME</h2>
+				<img
+					src="https://icon-library.com/images/default-user-icon/default-user-icon-4.jpg"
+					alt="Profile Picture"
+				/>
+			</div>
+		</div>
+		<div class="timer">
+			<p id="countdown"></p>
+		</div>
+		<div class="root">
+			<div id="question">
+				<h1>Loading...</h1>
+			</div>
+			<div class="question_btns">
+				<button id="prev-btn" onclick="prevQuestion()">PREVIOUS</button>
+				<button id="submit-btn" onclick="toggle_modal_1()">
+					SUBMIT
+				</button>
+				<button id="next-btn" onclick="nextQuestion()">NEXT</button>
+			</div>
+		</div>
+		<div class="modal-bg">
+			<div class="modal_1">
+				<h3>SUBMIT QUIZ</h3>
+				<h3 onclick="toggle_modal_1()">
+					<span class="material-icons">close</span>
+				</h3>
+				<hr />
+				<p id="submit_quiz_para"></p>
+				<br />
+				<p>Are you sure you want to submit?</p>
+				<button id="submit_quiz_btn" onclick="submitQuiz()">
+					SUBMIT
+				</button>
+				<button id="cancle-btn" onclick="toggle_modal_1()">
+					CANCEL
+				</button>
+			</div>
+			<div class="modal_2">
+				<h3>SUBMIT QUIZ</h3>
+				<hr />
+				<p id="modal_2_para"></p>
+			</div>
+		</div>
+		<script src="quiz.js"></script>
+	</body>
+</html>
